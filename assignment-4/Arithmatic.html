@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Arithmetic Operation</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" 
+	rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+</head>
+<body class="p-5">
+	<div class="container mt-3">
+		<h2 class='mb-4'>Simple Calculator</h2>
+		<div class="row mb-3">
+			<div class="col-md-3">
+				<label for="first_no" class="form-lable mb-1">First Number:</label>
+				<input type="number" class="form-control" id="fistNo" 
+				placeholder="Enter first number" />
+			</div>
+		</div>
+		<div class="row mb-3">
+				<div class="col-md-3">
+					<label for="second_no" class="form-lable mb-1">Second Number:</label>
+					<input type="number" class="form-control" id="secondNo" 
+					placeholder="Enter second number" />
+			    </div>
+		</div>
+		<div class="mb-3">
+			<button class="btn btn-primary" onclick="calculate('add')">Add</button>
+			<button class="btn btn-primary" onclick="calculate('sub')">Sub</button>
+			<button class="btn btn-primary" onclick="calculate('mul')">Mul</button>
+			<button class="btn btn-primary" onclick="calculate('div')">div</button>
+		</div>
+		<div id="result">
+			Result
+		</div>
+	</div>
+	<script>
+		function calculate(action)
+		{
+			const firstno = parseFloat(document.getElementById('fistNo').value);
+			const secondno = parseFloat(document.getElementById('secondNo').value);
+			let result;
+
+			//if  Not a Number an error message and stops the function (return).
+			if(isNaN(firstno) || isNaN(secondno))
+			{
+				document.getElementById('result').textContent = "Please Enter valid number";
+				return;
+			}
+			switch(action)
+			{
+				case 'add':
+					result = firstno + secondno;
+					break;
+
+				case 'sub':
+					result = firstno - secondno;
+					break;
+
+				case 'mul':
+					result = firstno * secondno;
+					break;
+
+				case 'div':
+					if(secondno === 0)
+					{
+						document.getElementById('result').textContent = "Cannot divide by zero";
+						return;
+					}
+					result = firstno / secondno
+					break;
+			}
+			document.getElementById('result').textContent = `Result:  ${result}`;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
