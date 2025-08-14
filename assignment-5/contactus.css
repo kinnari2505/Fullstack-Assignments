@@ -1,0 +1,53 @@
+.backgroudstyle
+{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f4f4f4;
+}
+.titlestyle
+{
+    text-align: center;
+    color: #333;
+}
+.formstyle
+{
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.labelstyle
+{
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+.txtstyle
+{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px dotted #ccc;
+}
+.error
+{
+    color: red;
+    font-size: 14px;
+}
+.dataContainer
+{
+    max-width: 500px;
+    margin: 20px auto;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.data-item
+{
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}

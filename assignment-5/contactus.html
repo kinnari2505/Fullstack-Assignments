@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ContactUs Page</title>
+        <link href="contactus.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body class="backgroudstyle">
+        <h2 class="titlestyle">ContactUs</h2>
+        <form id="containerform" class="formstyle">
+            <label for="name" class="labelstyle">Name:</label>
+            <input type="text" id="name" class="txtstyle"/>
+            <div id="nameError" class="error"></div>
+
+            <label for="email" class="labelstyle">Email:</label>
+            <input type="email" id="email" class="txtstyle"/>
+            <div id="emailError" class="error"></div>
+
+            <label for="message" class="labelstyle">Message:</label>
+            <textarea id="message" rows="4" class="txtstyle"></textarea>
+            <div id="messageError" class="error"></div>
+
+            <button type="submit" class="button-hover">Submit</button>
+        </form>
+        <div id="displayData" class="dataContainer">
+           <h3>Stored Messages</h3> 
+           <div id="storeData"></div>
+        </div>
+        <script src="contactus.js"></script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+How contactus page works
+
+Validation 
+
+Name: cannot be empty
+Email: regex check for proper format
+Message: must be at least 10 characters
+
+
+Local Storage stores an array of contact objects in JSON format.
+Display function reads from Local Storage and shows the stored contacts dynamically.
+Works even after refresh since Local Storage persists in the browser.
+
+//document.addEventListener("DOMContentLoaded", () => {
+    above line is telling the browser that 
+   "Run the code inside this function only after the HTML document has been fully
+    loaded and parsed, but before images, CSS, and other external resources have 
+    finished loading."
+
+});
+
+Why it’s used
+If you try to access elements in JavaScript before they exist in the DOM, you’ll get null errors.
+By wrapping your script in DOMContentLoaded, you ensure the HTML structure is ready to work with.
+
+document → Refers to the current webpage’s DOM (Document Object Model).
+.addEventListener() → Listens for an event to happen.
+"DOMContentLoaded" → A special event that fires when the HTML is fully loaded and turned into the DOM tree.
+() => { ... } → An arrow function that will execute when the event happens.
+
+
+What it does
+form.addEventListener("submit", ...)
+
+This means "When the form is submitted (by clicking a submit button or pressing Enter), 
+run the function inside."
+
+(e)
+This is the event object automatically passed to your function.
+It contains details about the event (what triggered it, when, where, etc.).
+
+e.preventDefault()
+
+By default, submitting a form causes the browser to Send the form data to the server 
+(if action is set)
+Reload or navigate away from the current page
+
+preventDefault() stops this default behavior.
+This is useful when you want to handle the form entirely with JavaScript 
+(e.g., validation, saving to local storage, AJAX).
