@@ -1,0 +1,34 @@
+nextBtn.addEventListener('click', () => 
+{
+    counter = (counter + 1) % images.length;
+    updateSlider();
+});
+
+//When the next button is clicked:- counter + 1 → moves to the next slider image index.
+
+% images.length :- infinite loop effect.
+Callsed updateSlider() to move the slider visually.
+
+prevBtn.addEventListener('click', () =>
+{
+    counter = (counter - 1 + images.length) % images.length;
+    updateSlider();
+});
+//counter - 1 :- goes back by one.
+//Adding images.length before % ensures no negative index.
+//% images.length wraps around to the last image when we go backward from the first image.
+
+function updateSlider() 
+{
+    const size = slider.clientWidth;
+    slider.style.transform = `translateX(${-size * counter}px)`;
+}
+//slider.clientWidth :- finds the current width of the visible slider area,responsive to window size.
+//translateX(-size * counter) :- Shifts the slider to the left by:
+//0 px for first image (counter = 0)
+
+//size px for second image (counter = 1)
+
+//size * 2 px for third image (counter = 2),This creates the sliding effect.
+
+
